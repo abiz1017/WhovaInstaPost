@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container{
+  display:grid;
+  grid-template-columns: 20% auto 20%;
 }
+.horiz{
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display:grid;
+  grid-template-columns: auto auto;
+}
+.vert{
+  flex-direction: row;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+.row{
+  height: 50px;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(220, 220, 220, 0.5);
+  display: flex;
+}
+.header-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.05rpx solid grey;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-color: rgba(179, 176, 176, 0.7);
+  border: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 50px;
+  padding: 10px;
+}
+.comment-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+.comment-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.reply-row{
+  padding-left: 100px;
+  padding-right: 100px;
+  flex-direction: column;
+  text-align: center;
+}
+.button-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+.comment-piece{
+  flex-grow:1;
+}
+.text-item{
+  display: flex;
+  align-items: center;
+  flex-grow: 7;
+}
+.end-item{
+  display: flex;
+justify-content: center;
+align-items: center;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  flex-grow: 1;
+}
+.img-item{
+  flex-grow:1;
+justify-content: center;
+align-items: center;
+
+}
+.user-item{
+  flex-grow: 8;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.field {
+  width: 75%;
+  height: 56px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(255,255,255,0.3);
+  transition: 0.3s all;
 }
