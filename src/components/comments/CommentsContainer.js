@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import CommentsList from "./CommentsList";
-import { useState } from "react";
 import { bindActionCreators } from "redux";
 import {
   addComment,

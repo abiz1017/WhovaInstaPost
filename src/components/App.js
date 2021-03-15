@@ -1,8 +1,7 @@
 import "./App.css";
-import Header from "./header/header";
-import Footer from "./header/footer";
+import Header from "./header/Header";
+import Footer from "./header/Footer";
 import pups from "./puppers.jpeg";
-import Comment from "./comments/Comment";
 import CommentsContainer from "./comments/CommentsContainer";
 import { useState } from "react";
 function App() {

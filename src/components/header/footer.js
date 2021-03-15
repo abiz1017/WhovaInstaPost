@@ -1,4 +1,3 @@
-import profile from "./profile.png";
 import { FaRegComment, FaRegBookmark } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FiShare } from "react-icons/fi";

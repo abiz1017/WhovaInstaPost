@@ -1,6 +1,5 @@
 import Comment from "./Comment";
 import { useState } from "react";
-import { dispatch } from "react-redux";
 /**
  * This component handles the template display
  * and organization of the comment components.

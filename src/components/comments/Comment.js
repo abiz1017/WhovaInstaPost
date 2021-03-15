@@ -10,7 +10,7 @@ import { useState } from "react";
  * has other comments within it.
  */
 function Comment({ comment, handleReply, handleLike, handleLikeIfReply }) {
-  const { user, text, landscape } = comment;
+  const { user, text } = comment;
   const [reply, setReply] = useState("");
   const [showReplies, setShowReplies] = useState(false);
   const [liked, setLiked] = useState(comment.liked);
@@ -29,11 +29,6 @@ function Comment({ comment, handleReply, handleLike, handleLikeIfReply }) {
         }}
       >
         <div className="comment-row">
-          {landscape && (
-            <div className="end-item">
-              <img src="" alt="" />{" "}
-            </div>
-          )}
           <div
             className="end-item"
             style={{ justifyContent: "left", flexGrow: "2" }}
