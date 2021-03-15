@@ -2,11 +2,17 @@ import { FaHeart } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { useState } from "react";
 
+/**
+ * This function handles the individual comment component
+ * and renders differently based on whether or not
+ * the component is a comment.
+ * It is recursively defined as the comment
+ * has other comments within it.
+ */
 function Comment({ comment, handleReply, handleLike, handleLikeIfReply }) {
-  const { likes, replies, user, text, landscape } = comment;
+  const { user, text, landscape } = comment;
   const [reply, setReply] = useState("");
   const [showReplies, setShowReplies] = useState(false);
-  const [id, setId] = useState(comment.id);
   const [liked, setLiked] = useState(comment.liked);
   const likeIfReply = (child) => {
     handleLikeIfReply(comment, child);
@@ -131,7 +137,7 @@ function Comment({ comment, handleReply, handleLike, handleLikeIfReply }) {
                     alert("field may not be empty!");
                     return;
                   }
-                  handleReply(id, reply);
+                  handleReply(comment.id, reply);
                   setReply("");
                 }}
                 className="btn btn-secondary"

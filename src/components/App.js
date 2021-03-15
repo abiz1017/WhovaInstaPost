@@ -6,7 +6,7 @@ import Comment from "./comments/Comment";
 import CommentsContainer from "./comments/CommentsContainer";
 import { useState } from "react";
 function App() {
-  const [landscape, toggleLandscape] = useState(true);
+  const [landscape, toggleLandscape] = useState(false);
   return (
     <>
       <div className="container">

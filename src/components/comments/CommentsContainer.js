@@ -8,6 +8,10 @@ import {
   addReply,
 } from "../../redux/actions/commentActions";
 import PropTypes from "prop-types";
+/**
+ * This component handles the redux store interactions
+ * and serves as a top level container for the comment list.
+ */
 function CommentsContainer(props) {
   console.log(props.comments);
   return (
