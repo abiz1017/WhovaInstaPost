@@ -6,6 +6,8 @@ export default function commentsReducer(state = initialState, action) {
     case types.CREATE_COMMENT:
       return [...state, { ...action.comment, id: state.length }];
     case types.LIKE_COMMENT:
+      // if comment is not reply, add a like to the
+      // comment object and return array.
       if (action.comment.isReply === false) {
         const x = state.filter((comment) => comment.id !== action.comment.id);
         const y = [
@@ -20,6 +22,10 @@ export default function commentsReducer(state = initialState, action) {
         });
         return sorted;
       } else {
+        // if comment is reply,
+        // need to extract the replies from the parent comment
+        // and add the updated comment back into the parent comments reply list
+        // and return that updated array.
         const n = state.filter((comment) => comment.id !== action.parent.id);
         const otherReplies = action.parent.replies.filter(
           (comment) => comment.id !== action.comment.id
@@ -42,6 +48,8 @@ export default function commentsReducer(state = initialState, action) {
           replies: [...action.parent.replies, action.comment],
         },
       ];
+      // call sort to preserve the order of comments,
+      // id is assigned based on order of commenting
       const sorted = [...n, ...reply].sort((a, b) => {
         return a.id - b.id;
       });

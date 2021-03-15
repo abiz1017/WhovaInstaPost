@@ -48,7 +48,7 @@ function App() {
             <div className="item" style={{ width: "100%" }}>
               <Header></Header>
               <div style={{ backgroundColor: "rgba(220, 220, 220, 0.5)" }}>
-                <hr />
+                <hr style={{ padding: "0px", margin: "0px" }} />
               </div>
 
               <Footer></Footer>

@@ -34,8 +34,11 @@ function Comment({ comment, handleReply, handleLike, handleLikeIfReply }) {
               <img src="" alt="" />{" "}
             </div>
           )}
-          <div className="end-item" style={{ justifyContent: "left" }}>
-            <strong style={{ paddingLeft: "20px" }}>{user}</strong>
+          <div
+            className="end-item"
+            style={{ justifyContent: "left", flexGrow: "2" }}
+          >
+            <strong style={{ paddingLeft: "20%" }}>{user}</strong>
           </div>
           <div className="text-item">
             <p>{text}</p>
